@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>JK HOSPITAL | Premier Multi-Speciality Hospital in Tanuku</title>
+  <meta name="description" content="JK Hospital in Tanuku provides world-class General Medicine, General Surgery, Pulmonology, Laparoscopy & 24/7 Emergency care. Experienced doctors & modern medical facilities." />
+  <meta name="keywords" content="JK Hospital Tanuku, Best Hospital in Tanuku, Pulmonology Tanuku, General Surgery Tanuku, Dr N Lokeswara Reddy, Laparoscopy Tanuku, Emergency Care Tanuku" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/logo.png" />
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- ==================== STETHOSCOPE INTRO SPLASH SCREEN ==================== -->
+  <div id="intro-loader" class="intro-screen">
+    <div class="intro-glow"></div>
+    <div class="intro-content">
+      <div class="intro-stethoscope-container">
+        <!-- Animated Stethoscope SVG with path drawing -->
+        <svg class="stethoscope-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Stethoscope Head / Ear Tubes -->
+          <path class="steth-path tube" d="M 60,30 C 60,80 75,100 100,100 C 125,100 140,80 140,30" stroke="#00d084" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="60" cy="26" r="6" fill="#24417C" stroke="#00d084" stroke-width="3"/>
+          <circle cx="140" cy="26" r="6" fill="#24417C" stroke="#00d084" stroke-width="3"/>
+          <!-- Flexible Tube to Chest Piece -->
+          <path class="steth-path main-tube" d="M 100,100 C 100,140 130,160 130,170 C 130,180 110,185 100,185 C 80,185 70,170 70,150" stroke="#3a5da5" stroke-width="6" stroke-linecap="round"/>
+          <!-- Chest Piece / Bell -->
+          <circle class="steth-pulse-ring" cx="70" cy="150" r="22" stroke="#00d084" stroke-width="2" opacity="0.6"/>
+          <circle cx="70" cy="150" r="14" fill="#24417C" stroke="#00d084" stroke-width="4"/>
+          <circle cx="70" cy="150" r="6" fill="#00d084"/>
+        </svg>
+
+        <!-- Dynamic Pulse Wave Line -->
+        <div class="ecg-line-container">
+          <svg class="ecg-svg" viewBox="0 0 300 60">
+            <path class="ecg-path" d="M 0,30 L 70,30 L 80,10 L 95,50 L 110,5 L 125,45 L 135,30 L 170,30 L 180,15 L 195,45 L 210,30 L 300,30" stroke="#00d084" stroke-width="3" fill="none"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="intro-text">
+        <div class="intro-logo-box">
+          <img src="/images/logo.png" alt="JK Hospital Logo" class="intro-logo" />
+        </div>
+        <h1 class="intro-title">J K HOSPITAL</h1>
+        <p class="intro-subtitle">Expert Care &bull; Advanced Treatment &bull; Better Lives</p>
+        <div class="intro-status">
+          <span class="pulse-dot"></span> Calibrating Stethoscope & Heartbeat Monitors... <span id="loader-progress">0%</span>
+        </div>
+      </div>
+
+      <button id="skip-intro-btn" class="btn-skip-intro">Enter Website &rarr;</button>
+    </div>
+  </div>
+
+  <!-- ==================== TOP EMERGENCY & QUICK ACTION BAR ==================== -->
+  <div class="top-bar">
+    <div class="container top-bar-flex">
+      <div class="top-emergency-badge">
+        <span class="live-dot pulse"></span>
+        <span class="emergency-text">24/7 EMERGENCY & ACCIDENT CARE TANUKU</span>
+      </div>
+      <div class="top-contacts">
+        <a href="tel:+919948954848" class="top-phone"><i class="phone-icon">&#9742;</i> +91 99489 54848</a>
+        <span class="divider">|</span>
+        <a href="tel:+919966446679" class="top-phone">+91 99664 46679</a>
+        <span class="divider">|</span>
+        <span class="top-location">📍 Tangirala Vari St, Tanuku</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header class="main-header" id="main-header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo">
+        <img src="/images/logo.png" alt="JK Hospital Tanuku" class="header-logo-img" />
+        <div class="brand-text">
+          <span class="brand-title">J K HOSPITAL</span>
+          <span class="brand-sub">MULTI SPECIALITY & PULMONOLOGY</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#symptom-checker" class="nav-link highlight-link">🩺 Stethoscope Check</a>
+        <a href="#departments" class="nav-link">Specialities</a>
+        <a href="#doctors" class="nav-link">Doctors</a>
+        <a href="#facilities" class="nav-link">Facilities</a>
+        <a href="#testimonials" class="nav-link">Reviews</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-primary nav-appointment-btn" id="open-appointment-btn">
+          <span>📅 Book Appointment</span>
+        </button>
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge fade-in">
+          <span class="badge-icon">🏥</span>
+          <span>Tanuku's Premier Multi-Speciality Medical Center</span>
+        </div>
+        <h1 class="hero-title fade-in">
+          Expert Medical Care. <br/>
+          <span class="gradient-text">Advanced Treatment.</span> <br/>
+          Better Lives.
+        </h1>
+        <p class="hero-description fade-in">
+          JK Hospital delivers trusted, round-the-clock healthcare with specialized departments in General Medicine, General Surgery, Pulmonology, Laparoscopy & Critical Intensive Care.
+        </p>
+
+        <div class="hero-cta-group fade-in">
+          <button class="btn btn-glow btn-lg" id="hero-book-btn">
+            <span>📅 Book Doctor Appointment</span>
+          </button>
+          <a href="tel:+919948954848" class="btn btn-outline-emergency btn-lg">
+            <span>🚨 Call Emergency (+91 99489 54848)</span>
+          </a>
+        </div>
+
+        <div class="hero-trust-bar fade-in">
+          <div class="trust-stat">
+            <span class="stat-number" data-target="150000">150,000+</span>
+            <span class="stat-label">Patients Healed</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-stat">
+            <span class="stat-number">24 / 7</span>
+            <span class="stat-label">Emergency & ICU</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Quality Care</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-card-wrapper">
+          <div class="main-visual-frame">
+            <img src="/images/hero-bg.jpg" alt="JK Hospital Interior" class="hero-main-img" />
+            <div class="heartbeat-overlay">
+              <canvas id="hero-ecg-canvas"></canvas>
+            </div>
+          </div>
+
+          <!-- Floating Interactive Medical Badges -->
+          <div class="floating-badge badge-steth float-anim-1">
+            <div class="badge-icon-box steth-box">🩺</div>
+            <div class="badge-info">
+              <strong>Stethoscope Audio PFT</strong>
+              <span>Pulmonology Specialist</span>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-emergency float-anim-2">
+            <div class="badge-icon-box emergency-box">🚑</div>
+            <div class="badge-info">
+              <strong>24x7 Ambulance</strong>
+              <span>Instant Trauma Response</span>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-doc float-anim-3">
+            <img src="/images/dr-lokeswara-reddy.png" alt="Dr N Lokeswara Reddy" class="badge-doc-img" />
+            <div class="badge-info">
+              <strong>Dr. N. Lokeswara Reddy</strong>
+              <span>Lead Specialist Doctor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STETHOSCOPE HEALTH CHECK & SYMPTOM EVALUATOR ==================== -->
+  <section class="section symptom-section" id="symptom-checker">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">INTERACTIVE HEALTH TOOL</span>
+        <h2 class="section-title">🩺 Stethoscope Sound & Symptom Evaluator</h2>
+        <p class="section-subtitle">Select your symptoms or test simulated stethoscope lung & heart sounds to find the right department & doctor instantly.</p>
+      </div>
+
+      <div class="symptom-evaluator-card">
+        <div class="evaluator-grid">
+          <!-- Left: Symptom Selector -->
+          <div class="symptom-inputs">
+            <h3>1. What symptoms are you experiencing?</h3>
+            <p class="input-hint">Click all symptoms that apply to you:</p>
+            
+            <div class="symptom-tags-grid">
+              <button class="symptom-chip" data-dept="pulmonology" data-symptom="Cough & Shortness of Breath">🫁 Persistent Cough / Shortness of Breath</button>
+              <button class="symptom-chip" data-dept="pulmonology" data-symptom="Asthma & Wheezing">💨 Asthma / Chest Wheezing</button>
+              <button class="symptom-chip" data-dept="general-medicine" data-symptom="Fever & Body Pain">🌡️ High Fever & Fatigue</button>
+              <button class="symptom-chip" data-dept="general-surgery" data-symptom="Severe Abdominal Pain">⚡ Acute Abdominal Pain</button>
+              <button class="symptom-chip" data-dept="laparoscopy" data-symptom="Gallbladder / Hernia discomfort">🔍 Gallbladder / Hernia Discomfort</button>
+              <button class="symptom-chip" data-dept="general-medicine" data-symptom="Diabetes & Blood Pressure">🩸 Diabetes & BP Fluctuations</button>
+              <button class="symptom-chip" data-dept="pulmonology" data-symptom="COPD / Chest Tightness">🫀 COPD & Chest Tightness</button>
+              <button class="symptom-chip" data-dept="emergency" data-symptom="Chest Pain & Emergency">🚨 Severe Chest Pain (Emergency)</button>
+            </div>
+
+            <!-- Stethoscope Audio Simulation Controls -->
+            <div class="audio-simulator-box">
+              <div class="audio-sim-header">
+                <span class="steth-icon-animated">🩺</span>
+                <div>
+                  <strong>Listen to Stethoscope Sound Simulator</strong>
+                  <p>Hear normal vs wheezing lung breath sounds</p>
+                </div>
+              </div>
+              <div class="audio-btn-row">
+                <button class="btn btn-sm btn-sound" data-sound="normal">🔊 Normal Breathing Sound</button>
+                <button class="btn btn-sm btn-sound" data-sound="wheeze">🔊 Wheezing (Asthma/COPD)</button>
+              </div>
+              <div id="sound-status-display" class="sound-status">Click a button above to listen to simulated auscultation.</div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Diagnosis Output -->
+          <div class="symptom-result-panel" id="symptom-result-panel">
+            <div class="result-placeholder" id="result-placeholder">
+              <div class="steth-pulse-graphic">🩺</div>
+              <h4>Select symptoms above to evaluate</h4>
+              <p>Our intelligent system will recommend the appropriate specialty, doctor, and treatment path at JK Hospital Tanuku.</p>
+            </div>
+
+            <div class="result-content hidden" id="result-content">
+              <div class="recommendation-badge" id="recommended-dept-badge">PULMONOLOGY DEPARTMENT</div>
+              <h3 id="recommendation-title">Recommended Specialty: Pulmonology & Respiratory Care</h3>
+              <p id="recommendation-desc">Based on your symptoms, our specialized Pulmonology team under Dr. N. Lokeswara Reddy provides comprehensive diagnostic tests (PFT, Spirometry) and treatment.</p>
+              
+              <div class="recommended-doctor-card">
+                <img src="/images/dr-lokeswara-reddy.png" alt="Doctor" id="rec-doc-img" />
+                <div>
+                  <h4 id="rec-doc-name">Dr. N. Lokeswara Reddy</h4>
+                  <p id="rec-doc-role">Senior Consultant & Pulmonologist</p>
+                  <span class="availability-tag">🟢 Available for Consultation Today</span>
+                </div>
+              </div>
+
+              <div class="result-actions">
+                <button class="btn btn-primary btn-block" id="btn-book-from-eval">📅 Book Appointment Now</button>
+                <a href="tel:+919948954848" class="btn btn-outline btn-block">📞 Call Doctor Desk</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT US SECTION ==================== -->
+  <section class="section about-section" id="about">
+    <div class="container about-grid">
+      <div class="about-visual">
+        <div class="about-image-stack">
+          <img src="/images/dr-lokeswara-reddy.png" alt="Dr N Lokeswara Reddy" class="about-img-main" />
+          <div class="about-experience-card">
+            <span class="exp-number">15+</span>
+            <span class="exp-text">Years of Excellence in Healthcare</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <span class="section-tag">ABOUT JK HOSPITAL TANUKU</span>
+        <h2 class="section-title">Committed to Compassionate, World-Class Healthcare</h2>
+        <p class="about-lead">
+          JK Hospital Multi-Speciality is a premier healthcare institution located in the heart of Tanuku on Tangirala Vari Street. We combine medical expertise with modern diagnostic technology to deliver accurate diagnoses and treatment plans tailored to each patient's unique health needs.
+        </p>
+
+        <div class="about-features">
+          <div class="feature-item">
+            <div class="feature-icon">👨‍⚕️</div>
+            <div>
+              <h4>Expert Doctors & Surgeons</h4>
+              <p>Highly qualified specialists dedicated to personalized patient treatment and continuous care.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">🏥</div>
+            <div>
+              <h4>State-of-the-Art Facilities</h4>
+              <p>Modern operation theatres, PFT diagnostic labs, advanced laparoscopy units, and round-the-clock pharmacy.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">🛡️</div>
+            <div>
+              <h4>Painless & Minimally Invasive Care</h4>
+              <p>Specialized laparoscopic techniques ensuring minimal scarring, reduced pain, and rapid recovery.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-cta-row">
+          <button class="btn btn-primary" id="about-appoint-btn">Book Consultation</button>
+          <a href="tel:+919948954848" class="phone-link-large">
+            <span class="icon">📞</span>
+            <div>
+              <small>Have Questions? Call Us</small>
+              <strong>+91 99489 54848</strong>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SPECIALITIES & DEPARTMENTS ==================== -->
+  <section class="section departments-section" id="departments">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">MEDICAL DEPARTMENTS</span>
+        <h2 class="section-title">Comprehensive Multi-Speciality Services</h2>
+        <p class="section-subtitle">Delivering high-precision care across major medical fields under one roof.</p>
+      </div>
+
+      <div class="departments-grid">
+        <!-- Department 1: General Medicine -->
+        <div class="dept-card" data-dept-id="general-medicine">
+          <div class="dept-icon-wrapper">
+            <span class="dept-icon">🩺</span>
+          </div>
+          <h3 class="dept-title">General Medicine</h3>
+          <p class="dept-desc">
+            Comprehensive diagnostic & therapeutic care for routine check-ups, preventive health, diabetes, hypertension, and chronic illnesses.
+          </p>
+          <ul class="dept-highlights">
+            <li>✓ Complete Medical Checkups</li>
+            <li>✓ Chronic Disease Management</li>
+            <li>✓ Infectious Disease Treatment</li>
+          </ul>
+          <button class="btn btn-sm btn-dept-details" data-dept="general-medicine">Learn More & Treatments &rarr;</button>
+        </div>
+
+        <!-- Department 2: General Surgery -->
+        <div class="dept-card" data-dept-id="general-surgery">
+          <div class="dept-icon-wrapper">
+            <span class="dept-icon">⚕️</span>
+          </div>
+          <h3 class="dept-title">General Surgery</h3>
+          <p class="dept-desc">
+            Expert surgical procedures ranging from routine operations to complex surgeries with precise pre-operative and post-operative care.
+          </p>
+          <ul class="dept-highlights">
+            <li>✓ Major & Minor Surgeries</li>
+            <li>✓ Wound & Trauma Care</li>
+            <li>✓ Post-Operative Rehabilitation</li>
+          </ul>
+          <button class="btn btn-sm btn-dept-details" data-dept="general-surgery">Learn More & Treatments &rarr;</button>
+        </div>
+
+        <!-- Department 3: Pulmonology -->
+        <div class="dept-card featured-dept" data-dept-id="pulmonology">
+          <div class="dept-badge">SPECIALTY CENTER</div>
+          <div class="dept-icon-wrapper">
+            <span class="dept-icon">🫁</span>
+          </div>
+          <h3 class="dept-title">Pulmonology & Respiratory Care</h3>
+          <p class="dept-desc">
+            Specialized diagnosis & treatment for asthma, COPD, bronchitis, pneumonia, tuberculosis, and lung disorders using advanced PFT.
+          </p>
+          <ul class="dept-highlights">
+            <li>✓ Pulmonary Function Tests (PFT)</li>
+            <li>✓ Asthma & COPD Management</li>
+            <li>✓ Bronchoscopy & Oxygen Therapy</li>
+          </ul>
+          <button class="btn btn-sm btn-dept-details" data-dept="pulmonology">Learn More & Treatments &rarr;</button>
+        </div>
+
+        <!-- Department 4: Laparoscopic Surgery -->
+        <div class="dept-card" data-dept-id="laparoscopy">
+          <div class="dept-icon-wrapper">
+            <span class="dept-icon">🔍</span>
+          </div>
+          <h3 class="dept-title">Laparoscopic Surgery</h3>
+          <p class="dept-desc">
+            Minimally invasive keyhole surgeries for gallbladder, appendicitis, hernia, and abdominal issues with fast recovery and minimal pain.
+          </p>
+          <ul class="dept-highlights">
+            <li>✓ Keyhole Gallbladder & Appendix</li>
+            <li>✓ Hernia Repair Surgery</li>
+            <li>✓ Quicker Healing & Less Scars</li>
+          </ul>
+          <button class="btn btn-sm btn-dept-details" data-dept="laparoscopy">Learn More & Treatments &rarr;</button>
+        </div>
+
+        <!-- Department 5: 24/7 Emergency & ICU -->
+        <div class="dept-card emergency-dept-card" data-dept-id="emergency">
+          <div class="dept-icon-wrapper">
+            <span class="dept-icon">🚑</span>
+          </div>
+          <h3 class="dept-title">24/7 Emergency & ICU</h3>
+          <p class="dept-desc">
+            Round-the-clock emergency response unit equipped for trauma, cardiac emergencies, critical resuscitation, and intensive care monitoring.
+          </p>
+          <ul class="dept-highlights">
+            <li>✓ 24/7 Ambulance Service</li>
+            <li>✓ ICU & Cardiac Resuscitation</li>
+            <li>✓ Immediate Doctor Response</li>
+          </ul>
+          <button class="btn btn-sm btn-dept-details" data-dept="emergency">Learn More & Emergency Line &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== OUR DOCTORS SECTION ==================== -->
+  <section class="section doctors-section" id="doctors">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">MEDICAL EXPERTS</span>
+        <h2 class="section-title">Meet Our Senior Specialist Doctors</h2>
+        <p class="section-subtitle">Dedicated healthcare professionals delivering evidence-based medical care.</p>
+      </div>
+
+      <div class="doctors-grid">
+        <!-- Doctor 1: Dr. N. Lokeswara Reddy -->
+        <div class="doctor-card">
+          <div class="doctor-img-container">
+            <img src="/images/dr-lokeswara-reddy.png" alt="Dr N Lokeswara Reddy" class="doctor-img" />
+            <span class="doc-badge">Lead Specialist</span>
+          </div>
+          <div class="doctor-info">
+            <h3 class="doc-name">Dr. N. Lokeswara Reddy</h3>
+            <p class="doc-qual">M.D. (General Medicine), Specialist Pulmonologist</p>
+            <p class="doc-bio">
+              Expert physician with extensive clinical experience in treating complex respiratory conditions, chronic lung diseases, pulmonology, and general internal medicine.
+            </p>
+            <div class="doc-meta">
+              <span>📍 OPD Hours: 9:00 AM - 8:30 PM</span>
+              <span class="status-online">🟢 Available Today</span>
+            </div>
+            <button class="btn btn-primary btn-block book-doc-btn" data-doc="Dr. N. Lokeswara Reddy">Book Consultation with Dr. Lokeswara Reddy</button>
+          </div>
+        </div>
+
+        <!-- Doctor 2: Specialist Surgical Consultant -->
+        <div class="doctor-card">
+          <div class="doctor-img-container">
+            <img src="/images/dr-tnn.png" alt="Surgical Specialist" class="doctor-img" />
+            <span class="doc-badge">Senior Surgeon</span>
+          </div>
+          <div class="doctor-info">
+            <h3 class="doc-name">General & Laparoscopic Surgeon</h3>
+            <p class="doc-qual">M.S. (General Surgery), FMAS (Laparoscopy Specialist)</p>
+            <p class="doc-bio">
+              Highly skilled surgeon specializing in minimally invasive laparoscopic procedures, abdominal surgeries, hernia repairs, and emergency surgical interventions.
+            </p>
+            <div class="doc-meta">
+              <span>📍 Surgery OPD: 10:00 AM - 7:00 PM</span>
+              <span class="status-online">🟢 Available Today</span>
+            </div>
+            <button class="btn btn-primary btn-block book-doc-btn" data-doc="Laparoscopic Surgeon">Book Surgical Consultation</button>
+          </div>
+        </div>
+
+        <!-- Doctor 3: Critical Care & Emergency Consultant -->
+        <div class="doctor-card">
+          <div class="doctor-img-container">
+            <img src="/images/dr-venn.png" alt="Emergency Specialist" class="doctor-img" />
+            <span class="doc-badge">24/7 Critical Care</span>
+          </div>
+          <div class="doctor-info">
+            <h3 class="doc-name">Critical Care & Emergency Specialist</h3>
+            <p class="doc-qual">M.D. (Emergency Medicine & Critical Care)</p>
+            <p class="doc-bio">
+              Specialist dedicated to 24/7 emergency resuscitation, ICU patient care, trauma stabilization, and rapid emergency interventions.
+            </p>
+            <div class="doc-meta">
+              <span>📍 24/7 Emergency Duty</span>
+              <span class="status-online">🔴 24/7 On Call</span>
+            </div>
+            <button class="btn btn-primary btn-block book-doc-btn" data-doc="Emergency Specialist">Request Emergency Doctor</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FACILITIES & WHY CHOOSE US ==================== -->
+  <section class="section facilities-section" id="facilities">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">ADVANCED INFRASTRUCTURE</span>
+        <h2 class="section-title">World-Class Facilities at Tanuku</h2>
+        <p class="section-subtitle">Engineered for patient comfort, hygiene, and clinical excellence.</p>
+      </div>
+
+      <div class="facilities-grid">
+        <div class="facility-card">
+          <div class="facility-icon">🔬</div>
+          <h3>Pulmonary Diagnostic Lab (PFT)</h3>
+          <p>Advanced Spirometry and Pulmonary Function Testing for accurate asthma, COPD, and lung capacity evaluations.</p>
+        </div>
+
+        <div class="facility-card">
+          <div class="facility-icon">🖥️</div>
+          <h3>Laparoscopy Suite</h3>
+          <p>High-definition camera systems and precision keyhole instruments for minimally invasive surgical procedures.</p>
+        </div>
+
+        <div class="facility-card">
+          <div class="facility-icon">🛏️</div>
+          <h3>Intensive Care Unit (ICU)</h3>
+          <p>Fully equipped multi-bed ICU with continuous cardiac monitors, ventilators, and round-the-clock nursing staff.</p>
+        </div>
+
+        <div class="facility-card">
+          <div class="facility-icon">💊</div>
+          <h3>24/7 In-House Pharmacy</h3>
+          <p>Full stock of essential medicines, surgical supplies, emergency drugs, and inhalers available at all times.</p>
+        </div>
+
+        <div class="facility-card">
+          <div class="facility-icon">🚑</div>
+          <h3>24/7 Ambulance Fleet</h3>
+          <p>Rapid emergency response vehicle equipped with oxygen support and life-saving equipment for quick patient transfer.</p>
+        </div>
+
+        <div class="facility-card">
+          <div class="facility-icon">🏥</div>
+          <h3>Deluxe Patient Wards</h3>
+          <p>Clean, spacious, air-conditioned private suites and semi-private wards designed for peaceful patient recovery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PATIENT REVIEWS & TESTIMONIALS ==================== -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">PATIENT STORIES</span>
+        <h2 class="section-title">What People Say About JK Hospital</h2>
+        <p class="section-subtitle">Real experiences from patients across Tanuku and West Godavari region.</p>
+      </div>
+
+      <div class="testimonials-slider">
+        <div class="testimonial-card">
+          <div class="rating-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Thanks to JK Hospital and Dr. N. Lokeswara Reddy's team, I feel completely reassured about my C.O.P.D treatment. My breathing has improved tremendously after their specialized PFT evaluation!"
+          </p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">JH</div>
+            <div>
+              <h4 class="reviewer-name">Jaeden Higgins</h4>
+              <span class="reviewer-tag">Pulmonology Patient &bull; Tanuku</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="rating-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "I underwent laparoscopic gallbladder surgery at JK Hospital. The doctor and staff were very caring. I had minimal pain and was discharged within 2 days. Highly recommended in Tanuku!"
+          </p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">AC</div>
+            <div>
+              <h4 class="reviewer-name">Amelie Clarcs</h4>
+              <span class="reviewer-tag">Laparoscopy Surgery Patient</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="rating-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "During a late-night medical emergency, JK Hospital Tanuku responded within minutes. The emergency duty doctors gave immediate treatment and saved my father's life."
+          </p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">NP</div>
+            <div>
+              <h4 class="reviewer-name">Nick Peterson</h4>
+              <span class="reviewer-tag">Emergency Care Patient Family</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT & LOCATION MAP ==================== -->
+  <section class="section contact-section" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info-panel">
+        <span class="section-tag">REACH OUT TO US</span>
+        <h2 class="section-title">Contact & Location Details</h2>
+        <p>Visit us or call our helpline for appointments, OPD schedules, or emergency assistance.</p>
+
+        <div class="contact-card-list">
+          <div class="contact-detail-card">
+            <div class="card-icon">📍</div>
+            <div>
+              <h4>Hospital Address</h4>
+              <p><strong>J K HOSPITAL</strong><br/>
+              Tangirala Vari Street (Beside Jockey Showroom street),<br/>
+              Tanuku, West Godavari District, Andhra Pradesh.</p>
+            </div>
+          </div>
+
+          <div class="contact-detail-card">
+            <div class="card-icon">📞</div>
+            <div>
+              <h4>24/7 Emergency & Appointment Helpline</h4>
+              <p><a href="tel:+919948954848" class="phone-link">+91 99489 54848</a> / <a href="tel:+919966446679" class="phone-link">+91 99664 46679</a></p>
+            </div>
+          </div>
+
+          <div class="contact-detail-card">
+            <div class="card-icon">⏰</div>
+            <div>
+              <h4>Working Hours</h4>
+              <p><strong>OPD Timings:</strong> Mon - Sat: 9:00 AM - 8:30 PM<br/>
+              <strong>Emergency & Casualty:</strong> Open 24 Hours / 7 Days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Message & Appointment Form -->
+      <div class="contact-form-panel">
+        <h3>Send a Message or Quick Inquiry</h3>
+        <form id="contact-quick-form">
+          <div class="form-group">
+            <label for="c-name">Full Name *</label>
+            <input type="text" id="c-name" required placeholder="Enter your full name" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-phone">Phone Number *</label>
+              <input type="tel" id="c-phone" required placeholder="+91 Mobile number" />
+            </div>
+
+            <div class="form-group">
+              <label for="c-dept">Department</label>
+              <select id="c-dept">
+                <option value="General Medicine">General Medicine</option>
+                <option value="General Surgery">General Surgery</option>
+                <option value="Pulmonology">Pulmonology & Respiratory</option>
+                <option value="Laparoscopy">Laparoscopic Surgery</option>
+                <option value="Emergency">24/7 Emergency Care</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="c-message">Message / Health Query</label>
+            <textarea id="c-message" rows="3" placeholder="Describe your health problem or preferred appointment day..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg">Submit Message & Get Callback</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-row">
+          <img src="/images/logo.png" alt="JK Hospital Logo" class="footer-logo" />
+          <h3>J K HOSPITAL</h3>
+        </div>
+        <p>The premier multi-speciality hospital in Tanuku committed to providing expert diagnoses, minimally invasive surgeries, advanced pulmonology, and round-the-clock emergency care.</p>
+        <div class="footer-emergency-callout">
+          🚨 Emergency Hotline: <strong>+91 99489 54848</strong>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Speciality Departments</h4>
+        <ul>
+          <li><a href="#departments">General Medicine</a></li>
+          <li><a href="#departments">General Surgery</a></li>
+          <li><a href="#departments">Pulmonology & PFT Lab</a></li>
+          <li><a href="#departments">Laparoscopic Surgery</a></li>
+          <li><a href="#departments">24/7 ICU & Emergency</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Navigation</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Hospital</a></li>
+          <li><a href="#symptom-checker">Stethoscope Tool</a></li>
+          <li><a href="#doctors">Specialist Doctors</a></li>
+          <li><a href="#facilities">Facilities</a></li>
+          <li><a href="#contact">Contact & Address</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>JK Hospital Tanuku</h4>
+        <p>📍 Tangirala Vari Street (Beside Jockey Showroom street), Tanuku, Andhra Pradesh</p>
+        <p>📞 +91 99489 54848<br/>📞 +91 99664 46679</p>
+        <p>✉️ emergency@jkhospitaltanuku.in</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 JK Hospital Tanuku. All Rights Reserved.</p>
+        <p>Designed with Advanced Stethoscope Animations & Premium Healthcare UI.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== APPOINTMENT BOOKING MODAL ==================== -->
+  <div id="appointment-modal" class="modal-backdrop">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="close-modal-btn">&times;</button>
+      <div class="modal-header">
+        <span class="modal-icon">🩺</span>
+        <div>
+          <h2>Book Consultation Appointment</h2>
+          <p>JK Hospital Tanuku &bull; Direct Doctor Slot Reservation</p>
+        </div>
+      </div>
+
+      <form id="appointment-form" class="modal-form">
+        <div class="form-group">
+          <label for="app-name">Patient Full Name *</label>
+          <input type="text" id="app-name" required placeholder="e.g. Ramesh Varma" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="app-phone">Phone Number *</label>
+            <input type="tel" id="app-phone" required placeholder="+91 10-digit number" />
+          </div>
+
+          <div class="form-group">
+            <label for="app-age">Patient Age / Gender</label>
+            <input type="text" id="app-age" placeholder="e.g. 38 yrs / Male" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="app-dept">Select Speciality Department *</label>
+            <select id="app-dept" required>
+              <option value="Pulmonology">Pulmonology & Respiratory Care (Dr. Lokeswara Reddy)</option>
+              <option value="General Medicine">General Medicine & Preventive Care</option>
+              <option value="General Surgery">General Surgery</option>
+              <option value="Laparoscopy">Laparoscopic Minimally Invasive Surgery</option>
+              <option value="Emergency">24/7 Emergency & ICU Care</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="app-date">Preferred Date *</label>
+            <input type="date" id="app-date" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Select Time Slot</label>
+          <div class="time-slots-grid">
+            <button type="button" class="slot-btn active" data-slot="10:00 AM">10:00 AM</button>
+            <button type="button" class="slot-btn" data-slot="11:30 AM">11:30 AM</button>
+            <button type="button" class="slot-btn" data-slot="02:00 PM">02:00 PM</button>
+            <button type="button" class="slot-btn" data-slot="05:30 PM">05:30 PM</button>
+            <button type="button" class="slot-btn" data-slot="07:00 PM">07:00 PM</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="app-notes">Reason for Visit / Symptoms (Optional)</label>
+          <textarea id="app-notes" rows="2" placeholder="Describe symptoms (cough, fever, surgery evaluation, etc.)"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-glow btn-block btn-lg" id="submit-booking-btn">Confirm Doctor Appointment 🚀</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== DEPARTMENT DETAILS MODAL ==================== -->
+  <div id="dept-detail-modal" class="modal-backdrop">
+    <div class="modal-card modal-lg">
+      <button class="modal-close-btn" id="close-dept-modal-btn">&times;</button>
+      <div id="dept-modal-body">
+        <!-- Content dynamically injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FLOATING EMERGENCY CALL WIDGET ==================== -->
+  <div class="floating-emergency-widget">
+    <a href="tel:+919948954848" class="emergency-pulse-btn" title="24/7 Emergency Call: +91 99489 54848">
+      <span class="steth-pulse-icon">🚨</span>
+      <span class="emergency-label">24/7 Emergency<br/><small>+91 99489 54848</small></span>
+    </a>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
