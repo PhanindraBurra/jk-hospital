@@ -349,7 +349,7 @@ button, input, select, textarea {
 .main-header {
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(226, 232, 240, 0.8);
   z-index: 999;
@@ -365,19 +365,23 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
-  gap: 16px;
+  height: 84px;
+  max-width: 1400px;
+  width: 94%;
+  margin: 0 auto;
+  gap: 24px;
 }
 
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex-shrink: 0;
+  margin-right: 10px;
 }
 
 .header-logo-img {
-  height: 48px;
+  height: 50px;
   width: auto;
   object-fit: contain;
 }
@@ -390,35 +394,37 @@ button, input, select, textarea {
 .brand-title {
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   color: var(--primary-dark);
   letter-spacing: 0.5px;
-  line-height: 1;
+  line-height: 1.1;
   white-space: nowrap;
 }
 
 .brand-sub {
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   font-weight: 700;
   color: var(--accent-teal);
-  letter-spacing: 0.8px;
+  letter-spacing: 1px;
   white-space: nowrap;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 22px;
   flex-wrap: nowrap;
 }
 
 .nav-link {
   font-weight: 600;
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   color: var(--text-secondary);
   position: relative;
-  padding: 6px 0;
+  padding: 8px 6px;
   white-space: nowrap;
+  letter-spacing: 0.2px;
+  transition: var(--transition-fast);
 }
 
 .nav-link:hover, .nav-link.active {
@@ -444,8 +450,9 @@ button, input, select, textarea {
 .highlight-link {
   color: var(--primary-blue);
   background: rgba(58, 93, 165, 0.08);
-  padding: 6px 12px;
+  padding: 8px 16px;
   border-radius: var(--radius-full);
+  margin: 0 4px;
 }
 
 .highlight-link:hover {
@@ -457,13 +464,15 @@ button, input, select, textarea {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
+  margin-left: 10px;
 }
 
 .nav-appointment-btn {
   white-space: nowrap;
-  padding: 10px 18px;
-  font-size: 0.88rem;
+  padding: 12px 22px;
+  font-size: 0.92rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .hamburger {
@@ -1736,40 +1745,24 @@ button, input, select, textarea {
    RESPONSIVE MEDIA QUERIES (DESKTOP, LAPTOP, TABLET & MOBILE)
    ========================================================================== */
 
-/* Laptop & Large Tablet (1025px to 1180px) */
-@media (max-width: 1180px) {
-  .nav-menu {
-    gap: 12px;
-  }
-  .nav-link {
-    font-size: 0.82rem;
-  }
-  .brand-title {
-    font-size: 1.15rem;
-  }
-  .header-container {
-    padding: 0 10px;
-  }
-}
-
-/* Tablet Breakpoint (1024px and below) */
-@media (max-width: 1024px) {
+/* Laptop & Tablet Breakpoint (1260px and below) */
+@media (max-width: 1260px) {
   .hamburger {
     display: flex;
   }
   
   .nav-menu {
     position: fixed;
-    top: 80px;
+    top: 84px;
     left: 0;
     width: 100vw;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 84px);
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(20px);
     flex-direction: column;
     justify-content: flex-start;
     padding: 40px 24px;
-    gap: 20px;
+    gap: 24px;
     box-shadow: var(--shadow-lg);
     opacity: 0;
     visibility: hidden;
