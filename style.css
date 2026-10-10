@@ -1833,29 +1833,68 @@ button, input, select, textarea {
     display: none;
   }
   .top-emergency-badge {
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     margin: 0 auto;
+    text-align: center;
   }
   
+  .main-header {
+    height: 68px;
+  }
+
   .header-container {
-    height: 70px;
+    height: 68px;
+    padding: 0 12px;
+    gap: 8px;
   }
-  
-  .nav-menu {
-    top: 70px;
-    height: calc(100vh - 70px);
+
+  .header-logo-img {
+    height: 38px;
+  }
+
+  .brand-title {
+    font-size: 1.05rem;
+    letter-spacing: 0.1px;
   }
 
   .brand-sub {
-    font-size: 0.6rem;
+    font-size: 0.55rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .nav-menu {
+    top: 68px;
+    height: calc(100vh - 68px);
+    padding: 30px 20px;
+  }
+
+  .header-actions {
+    gap: 8px;
+    margin-left: auto;
+  }
+
+  .nav-appointment-btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    border-radius: var(--radius-full);
   }
 
   .nav-appointment-btn span {
-    font-size: 0.8rem;
+    display: inline-block;
+  }
+
+  .hero-section {
+    padding: 40px 0 60px 0;
   }
 
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
+    margin-bottom: 16px;
+  }
+
+  .hero-description {
+    font-size: 0.98rem;
+    margin-bottom: 24px;
   }
   
   .floating-badge {
@@ -1864,21 +1903,17 @@ button, input, select, textarea {
     bottom: auto !important;
     left: auto !important;
     right: auto !important;
-    margin: 12px 0;
+    margin: 10px 0;
     width: 100%;
     justify-content: flex-start;
   }
 
-  .main-visual-frame {
-    height: auto;
-  }
-
   .hero-main-img {
-    height: 320px;
+    height: 280px;
   }
 
   .symptom-evaluator-card {
-    padding: 24px;
+    padding: 20px 16px;
   }
 
   .symptom-tags-grid {
@@ -1887,7 +1922,7 @@ button, input, select, textarea {
 
   .symptom-chip {
     font-size: 0.82rem;
-    padding: 8px 14px;
+    padding: 8px 12px;
     width: 100%;
     text-align: left;
   }
@@ -1917,34 +1952,55 @@ button, input, select, textarea {
     gap: 10px;
     text-align: center;
   }
+
+  .floating-emergency-widget {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .emergency-pulse-btn {
+    padding: 8px 14px;
+    font-size: 0.75rem;
+  }
+
+  .steth-pulse-icon {
+    font-size: 1.2rem;
+  }
 }
 
 /* Small Mobile Screens (480px and below) */
 @media (max-width: 480px) {
+  .brand-sub {
+    display: none; /* Keep header clean on small phones */
+  }
+
+  .nav-appointment-btn {
+    padding: 5px 9px;
+    font-size: 0.72rem;
+  }
+
   .hero-title {
-    font-size: 1.85rem;
+    font-size: 1.8rem;
   }
 
   .hero-cta-group {
     flex-direction: column;
     width: 100%;
+    gap: 12px;
   }
 
   .hero-cta-group .btn {
     width: 100%;
+    padding: 12px 18px;
+    font-size: 0.9rem;
   }
 
   .trust-stat .stat-number {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   .trust-stat .stat-label {
-    font-size: 0.75rem;
-  }
-
-  .floating-emergency-widget {
-    bottom: 20px;
-    right: 20px;
+    font-size: 0.72rem;
   }
 
   .emergency-label small {
@@ -1952,7 +2008,8 @@ button, input, select, textarea {
   }
 
   .modal-card {
-    padding: 24px 18px;
+    padding: 20px 15px;
+    width: 95%;
   }
 
   .time-slots-grid {
